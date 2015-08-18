@@ -27,7 +27,7 @@ module.exports = function Clive(options) {
     argv: argv
   };
 
-  app.config = require('./lib/config')(app);
+  app.config = require('./lib/config')(app, options.defaultConfig);
   app.commands = require('./lib/commands')(app);
   app.run = require('./lib/run')(app);
 
